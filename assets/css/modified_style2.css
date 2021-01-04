@@ -1,0 +1,14 @@
+.h1, h1 {
+    font-size: 2.4em;
+    line-height: 1.05;
+}
+
+.post .pageTitle, .post dl, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .post ol, .post p, .post ul {
+    width: 100%;
+    float: none;
+}
+
+.h2, h2 {
+    font-size: 1.5em;
+    line-height: 1.25;
+}
