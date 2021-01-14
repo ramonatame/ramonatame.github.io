@@ -747,7 +747,7 @@ a:hover {
     width: 100%;
     display: block;
     background: #1e2761;
-    border-bottom: 2px solid #349e63
+    border-bottom: 2px solid #408ec6
 }
 
 .nav-collapse ul li a {
@@ -1112,20 +1112,468 @@ dd {
 }
 
 @media (prefers-color-scheme:dark) {
+/*
+                        _______
+                       /       \
+                      .==.    .==.
+                     ((  ))==((  ))
+                    / "=="    "=="\
+                   /____|| || ||___\
+       ________     ____    ________  ___    ___
+       |  ___  \   /    \   |  ___  \ |  |  /  /
+       |  |  \  \ /  /\  \  |  |  \  \|  |_/  /
+       |  |   )  /  /__\  \ |  |__/  /|  ___  \
+       |  |__/  /  ______  \|  ____  \|  |  \  \
+_______|_______/__/ ____ \__\__|___\__\__|___\__\____
+|  ___  \ |  ____/ /    \   |  ___  \ |  ____|  ___  \
+|  |  \  \|  |___ /  /\  \  |  |  \  \|  |___|  |  \  \
+|  |__/  /|  ____/  /__\  \ |  |   )  |  ____|  |__/  /
+|  ____  \|  |__/  ______  \|  |__/  /|  |___|  ____  \
+|__|   \__\____/__/      \__\_______/ |______|__|   \__\
+                https://darkreader.org
+*/
+/* User-Agent Style */
+html {
+    background-color: #181a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #555b00 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #202324 #454a4d;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+
+/* Invert Style */
+.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, embed[type="application/pdf"] {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}
+
+/* Variables Style */
+:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}
+
+/* Modified CSS */
+a {
+    background-color: transparent;
+}
+abbr[title] {
+    border-bottom-color: currentcolor;
+    text-decoration-color: currentcolor;
+}
+mark {
+    background-color: rgb(204, 204, 0);
+    color: rgb(232, 230, 227); 
+}
+[type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring,
+button:-moz-focusring {
+    outline-color: rgb(140, 130, 115);
+}
+legend {
+    color: inherit;
+}
+.button,
+.button-secondary,
+.button-tertiary,
+.button__outline {
+    background-color: rgb(24, 31, 78);
+    text-decoration-color: currentcolor;
+    color: rgb(232, 230, 227);
+    border-color: currentcolor;
+}
+.button-secondary:focus,
+.button-secondary:hover,
+.button-tertiary:focus,
+.button-tertiary:hover,
+.button:focus,
+.button:hover,
+.button__outline:focus,
+.button__outline:hover {
+    color: rgb(232, 230, 227);
+    text-decoration-color: currentcolor;
+    background-color: rgb(46, 109, 154);
+}
+.button-secondary {
+    background-color: rgb(28, 50, 73);
+}
+.button-secondary:hover {
+    background-color: rgb(46, 109, 154);
+}
+.button-tertiary {
+    background-color: rgb(72, 78, 81);
+}
+.button-tertiary:hover {
+    background-color: rgb(46, 109, 154);
+}
+.button__outline {
+    background-color: transparent;
+    border-color: rgb(51, 67, 166);
+    color: rgb(158, 186, 225);
+}
+.button__outline:hover {
+    background-color: rgb(46, 109, 154);
+    color: rgb(232, 230, 227); 
+}
+input[type="email"], input[type="number"], input[type="password"], input[type="phone"], input[type="search"], input[type="text"],
+textarea {
+    background-color: rgb(38, 41, 43); background-image: none; outline-color: currentcolor; border-color: currentcolor; 
+}
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="phone"]:focus, input[type="search"]:focus, input[type="text"]:focus,
+textarea:focus {
+    border-color: rgb(51, 67, 166);
+}
+form .note {
+    color: rgb(178, 172, 162);
+}
+form .error .reason {
+    color: rgb(255, 74, 63); 
+}
+form .error input[type="email"], form .error input[type="number"], form .error input[type="password"], form .error input[type="phone"], form .error input[type="search"], form .error input[type="text"],
+form .error textarea {
+    border-color: rgb(162, 9, 0);
+}
+table {
+    border-color: rgb(61, 66, 69);
+}
+table caption {
+    color: rgb(178, 172, 162);
+}
+tr {
+    border-bottom-color: rgb(61, 66, 69);
+}
+tr:nth-child(2n) {
+    background-color: rgb(29, 31, 32);
+}
+td {
+    border-right-color: rgb(61, 66, 69);
+}
+td:last-child {
+    border-right-color: currentcolor;
+}
+th {
+    background-color: rgb(29, 31, 32);
+    border-bottom-color: rgb(61, 66, 69);
+    border-right-color: rgb(61, 66, 69);
+}
+th:last-child {
+    border-right-color: currentcolor;
+}
+.highlight {
+    background-color: rgb(44, 48, 50);
+    background-image: none;
+    color: rgb(193, 188, 180);
+}
+.highlight .hll {
+    background-color: rgb(82, 82, 0);
+}
+.highlight .gd {
+    color: rgb(200, 196, 189);
+    background-color: rgb(11, 16, 18);
+}
+.highlight .gr {
+    color: rgb(221, 218, 213);
+    background-color: rgb(163, 0, 0);
+}
+.highlight .gi {
+    color: rgb(188, 182, 174);
+    background-color: rgb(25, 34, 36);
+}
+.highlight .go {
+    color: rgb(202, 198, 191);
+    background-color: rgb(35, 38, 40);
+}
+.highlight .kt {
+    color: rgb(214, 211, 205);
+}
+.highlight .ni {
+    color: rgb(157, 148, 135);
+}
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cs {
+    color: rgb(160, 152, 139);
+}
+.highlight .bp,
+.highlight .err,
+.highlight .g,
+.highlight .ge,
+.highlight .gp,
+.highlight .gs,
+.highlight .gt,
+.highlight .l,
+.highlight .ld,
+.highlight .n,
+.highlight .nc,
+.highlight .nd,
+.highlight .ne,
+.highlight .nl,
+.highlight .nn,
+.highlight .nx,
+.highlight .ow,
+.highlight .p,
+.highlight .py,
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sr,
+.highlight .ss,
+.highlight .sx,
+.highlight .w,
+.highlight .x {
+    color: rgb(193, 188, 180);
+}
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .nt {
+    color: rgb(118, 168, 208);
+}
+.highlight .cp,
+.highlight .gh,
+.highlight .gu,
+.highlight .na,
+.highlight .nf {
+    color: rgb(234, 173, 84);
+}
+.highlight .il,
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .nb,
+.highlight .no {
+    color: rgb(147, 228, 68);
+}
+.highlight .o {
+    color: rgb(173, 165, 155);
+}
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+    color: rgb(232, 230, 227);
+}
+body {
+    color: rgb(221, 218, 214);
+}
+::selection {
+    background-color: rgb(24, 31, 78);
+    background-image: none;
+    color: rgb(232, 230, 227);
+}
+::selection {
+    background-color: rgb(13, 14, 14);
+    background-image: none;
+    color: rgb(232, 230, 227);
+}
+a {
+    color: #3391ff;
+}
+a:hover {
+    color: rgb(82, 153, 203);
+}
+.nav-collapse ul {
+    list-style-image: none;
+}
+.nav-collapse ul li {
+    background-color: rgb(24, 31, 78);
+    background-image: none;
+    border-bottom-color: rgb(41, 96, 136);
+}
+.nav-collapse ul li a {
+    color: rgb(232, 230, 227);
+    text-decoration-color: currentcolor;
+}
+.nav-toggle {
+    background-color: rgb(24, 31, 78);
+    color: rgb(232, 230, 227);
+    text-decoration-color: currentcolor;
+}
+.nav-toggle:hover {
+    color: rgb(232, 230, 227);
+    background-color: rgb(46, 109, 154);
+}
+.noList {
+    list-style-image: none;
+}
+.header {
+    background-color: rgb(24, 31, 78);
+    background-image: url("https://www.bluehatsecurity.net/assets/img/header.jpg");
+    color: rgb(232, 230, 227);
+}
+.header h1 a {
+    color: rgb(232, 230, 227);
+    text-decoration-color: currentcolor;
+}
+.post blockquote::after,
+.post blockquote::before {
+    background-color: rgb(24, 31, 78);
+    background-image: none;
+}
+.post .meta {
+    color: rgb(152, 143, 129);
+}
+.post figure figcaption {
+    color: rgb(173, 165, 155);
+}
+.post .dropcap {
+    color: rgb(158, 186, 225);
+}
+.postNav {
+    border-top-color: rgb(55, 60, 62);
+    border-bottom-color: rgb(55, 60, 62);
+}
+.postNav .next.image,
+.postNav .prev.image {
+    text-decoration-color: currentcolor;
+    color: rgb(232, 230, 227);
+    text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 3px;
+}
+.footer .container {
+    border-top-color: rgb(59, 64, 66);
+}
+.footer-links ul li a svg .outer-shape {
+    fill: #3391ff;
+}
+.footer-links ul li a svg .inner-shape {
+    fill: rgb(232, 230, 227);
+}
+.footer-links ul li:hover a svg .outer-shape {
+    fill: rgb(82, 153, 203);
+}
+.posts li::before {
+    background-color: rgb(38, 41, 43);
+    background-image: none;
+}
+.posts li a {
+    text-decoration-color: currentcolor;
+}
+.posts li a:hover {
+    text-decoration-color: currentcolor;
+}
+.posts li .date {
+    color: rgb(152, 143, 129);
+}
+@media (prefers-color-scheme: dark) {
     body {
-        background-color: #000
+        background-color: rgb(0, 0, 0);
     }
     .posts li .date,
     body {
-        color: #fff
+        color: rgb(232, 230, 227);
     }
     .postNav {
-        border-top: 1px solid #1a1a1a;
-        border-bottom: 1px solid #1a1a1a
+        border-top-color: rgb(131, 122, 108);
+        border-bottom-color: rgb(131, 122, 108);
     }
     .footer .container {
-        border-top-color: #1a1a1a
+        border-top-color: rgb(131, 122, 108);
     }
+}
+@media only screen and (min-width: 800px) {
+    .content::after {
+        background-color: rgb(24, 26, 27);
+        background-image: none;
+    }
+    .header nav ul li {
+        background-color: rgba(0, 0, 0, 0);
+        background-image: none;
+        border-color: currentcolor;
+    }
+    .header nav ul li a {
+        color: rgb(232, 230, 227);
+        text-decoration-color: currentcolor;
+    }
+    .header nav ul li a:hover {
+        color: rgb(82, 153, 203);
+    }
+    .header nav ul li.current {
+        border-bottom-color: rgba(48, 52, 54, 0.4);
+    }
+    .post .featuredImage::before {
+        background-color: rgb(24, 26, 27);
+        background-image: none;
+    }
+}
+@media only screen and (min-width: 800px) and (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(0, 0, 0);
+        color: rgb(232, 230, 227);
+    }
+    .content::after,
+    .post .featuredImage::before {
+        background-color: rgb(0, 0, 0);
+        background-image: none;
+    }
+}
+
+/* Override Style */
+.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+
 }
 
 @media only screen and (min-width:800px) {
@@ -1322,14 +1770,468 @@ dd {
 }
 
 @media only screen and (min-width:800px) and (prefers-color-scheme:dark) {
+    /*
+                        _______
+                       /       \
+                      .==.    .==.
+                     ((  ))==((  ))
+                    / "=="    "=="\
+                   /____|| || ||___\
+       ________     ____    ________  ___    ___
+       |  ___  \   /    \   |  ___  \ |  |  /  /
+       |  |  \  \ /  /\  \  |  |  \  \|  |_/  /
+       |  |   )  /  /__\  \ |  |__/  /|  ___  \
+       |  |__/  /  ______  \|  ____  \|  |  \  \
+_______|_______/__/ ____ \__\__|___\__\__|___\__\____
+|  ___  \ |  ____/ /    \   |  ___  \ |  ____|  ___  \
+|  |  \  \|  |___ /  /\  \  |  |  \  \|  |___|  |  \  \
+|  |__/  /|  ____/  /__\  \ |  |   )  |  ____|  |__/  /
+|  ____  \|  |__/  ______  \|  |__/  /|  |___|  ____  \
+|__|   \__\____/__/      \__\_______/ |______|__|   \__\
+                https://darkreader.org
+*/
+/* User-Agent Style */
+html {
+    background-color: #181a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #555b00 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #202324 #454a4d;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+
+/* Invert Style */
+.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, embed[type="application/pdf"] {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}
+
+/* Variables Style */
+:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}
+
+/* Modified CSS */
+a {
+    background-color: transparent;
+}
+abbr[title] {
+    border-bottom-color: currentcolor;
+    text-decoration-color: currentcolor;
+}
+mark {
+    background-color: rgb(204, 204, 0);
+    color: rgb(232, 230, 227); 
+}
+[type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring,
+button:-moz-focusring {
+    outline-color: rgb(140, 130, 115);
+}
+legend {
+    color: inherit;
+}
+.button,
+.button-secondary,
+.button-tertiary,
+.button__outline {
+    background-color: rgb(24, 31, 78);
+    text-decoration-color: currentcolor;
+    color: rgb(232, 230, 227);
+    border-color: currentcolor;
+}
+.button-secondary:focus,
+.button-secondary:hover,
+.button-tertiary:focus,
+.button-tertiary:hover,
+.button:focus,
+.button:hover,
+.button__outline:focus,
+.button__outline:hover {
+    color: rgb(232, 230, 227);
+    text-decoration-color: currentcolor;
+    background-color: rgb(46, 109, 154);
+}
+.button-secondary {
+    background-color: rgb(28, 50, 73);
+}
+.button-secondary:hover {
+    background-color: rgb(46, 109, 154);
+}
+.button-tertiary {
+    background-color: rgb(72, 78, 81);
+}
+.button-tertiary:hover {
+    background-color: rgb(46, 109, 154);
+}
+.button__outline {
+    background-color: transparent;
+    border-color: rgb(51, 67, 166);
+    color: rgb(158, 186, 225);
+}
+.button__outline:hover {
+    background-color: rgb(46, 109, 154);
+    color: rgb(232, 230, 227); 
+}
+input[type="email"], input[type="number"], input[type="password"], input[type="phone"], input[type="search"], input[type="text"],
+textarea {
+    background-color: rgb(38, 41, 43); background-image: none; outline-color: currentcolor; border-color: currentcolor; 
+}
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="phone"]:focus, input[type="search"]:focus, input[type="text"]:focus,
+textarea:focus {
+    border-color: rgb(51, 67, 166);
+}
+form .note {
+    color: rgb(178, 172, 162);
+}
+form .error .reason {
+    color: rgb(255, 74, 63); 
+}
+form .error input[type="email"], form .error input[type="number"], form .error input[type="password"], form .error input[type="phone"], form .error input[type="search"], form .error input[type="text"],
+form .error textarea {
+    border-color: rgb(162, 9, 0);
+}
+table {
+    border-color: rgb(61, 66, 69);
+}
+table caption {
+    color: rgb(178, 172, 162);
+}
+tr {
+    border-bottom-color: rgb(61, 66, 69);
+}
+tr:nth-child(2n) {
+    background-color: rgb(29, 31, 32);
+}
+td {
+    border-right-color: rgb(61, 66, 69);
+}
+td:last-child {
+    border-right-color: currentcolor;
+}
+th {
+    background-color: rgb(29, 31, 32);
+    border-bottom-color: rgb(61, 66, 69);
+    border-right-color: rgb(61, 66, 69);
+}
+th:last-child {
+    border-right-color: currentcolor;
+}
+.highlight {
+    background-color: rgb(44, 48, 50);
+    background-image: none;
+    color: rgb(193, 188, 180);
+}
+.highlight .hll {
+    background-color: rgb(82, 82, 0);
+}
+.highlight .gd {
+    color: rgb(200, 196, 189);
+    background-color: rgb(11, 16, 18);
+}
+.highlight .gr {
+    color: rgb(221, 218, 213);
+    background-color: rgb(163, 0, 0);
+}
+.highlight .gi {
+    color: rgb(188, 182, 174);
+    background-color: rgb(25, 34, 36);
+}
+.highlight .go {
+    color: rgb(202, 198, 191);
+    background-color: rgb(35, 38, 40);
+}
+.highlight .kt {
+    color: rgb(214, 211, 205);
+}
+.highlight .ni {
+    color: rgb(157, 148, 135);
+}
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cs {
+    color: rgb(160, 152, 139);
+}
+.highlight .bp,
+.highlight .err,
+.highlight .g,
+.highlight .ge,
+.highlight .gp,
+.highlight .gs,
+.highlight .gt,
+.highlight .l,
+.highlight .ld,
+.highlight .n,
+.highlight .nc,
+.highlight .nd,
+.highlight .ne,
+.highlight .nl,
+.highlight .nn,
+.highlight .nx,
+.highlight .ow,
+.highlight .p,
+.highlight .py,
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sr,
+.highlight .ss,
+.highlight .sx,
+.highlight .w,
+.highlight .x {
+    color: rgb(193, 188, 180);
+}
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .nt {
+    color: rgb(118, 168, 208);
+}
+.highlight .cp,
+.highlight .gh,
+.highlight .gu,
+.highlight .na,
+.highlight .nf {
+    color: rgb(234, 173, 84);
+}
+.highlight .il,
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .nb,
+.highlight .no {
+    color: rgb(147, 228, 68);
+}
+.highlight .o {
+    color: rgb(173, 165, 155);
+}
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+    color: rgb(232, 230, 227);
+}
+body {
+    color: rgb(221, 218, 214);
+}
+::selection {
+    background-color: rgb(24, 31, 78);
+    background-image: none;
+    color: rgb(232, 230, 227);
+}
+::selection {
+    background-color: rgb(13, 14, 14);
+    background-image: none;
+    color: rgb(232, 230, 227);
+}
+a {
+    color: #3391ff;
+}
+a:hover {
+    color: rgb(82, 153, 203);
+}
+.nav-collapse ul {
+    list-style-image: none;
+}
+.nav-collapse ul li {
+    background-color: rgb(24, 31, 78);
+    background-image: none;
+    border-bottom-color: rgb(41, 96, 136);
+}
+.nav-collapse ul li a {
+    color: rgb(232, 230, 227);
+    text-decoration-color: currentcolor;
+}
+.nav-toggle {
+    background-color: rgb(24, 31, 78);
+    color: rgb(232, 230, 227);
+    text-decoration-color: currentcolor;
+}
+.nav-toggle:hover {
+    color: rgb(232, 230, 227);
+    background-color: rgb(46, 109, 154);
+}
+.noList {
+    list-style-image: none;
+}
+.header {
+    background-color: rgb(24, 31, 78);
+    background-image: url("https://www.bluehatsecurity.net/assets/img/header.jpg");
+    color: rgb(232, 230, 227);
+}
+.header h1 a {
+    color: rgb(232, 230, 227);
+    text-decoration-color: currentcolor;
+}
+.post blockquote::after,
+.post blockquote::before {
+    background-color: rgb(24, 31, 78);
+    background-image: none;
+}
+.post .meta {
+    color: rgb(152, 143, 129);
+}
+.post figure figcaption {
+    color: rgb(173, 165, 155);
+}
+.post .dropcap {
+    color: rgb(158, 186, 225);
+}
+.postNav {
+    border-top-color: rgb(55, 60, 62);
+    border-bottom-color: rgb(55, 60, 62);
+}
+.postNav .next.image,
+.postNav .prev.image {
+    text-decoration-color: currentcolor;
+    color: rgb(232, 230, 227);
+    text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 3px;
+}
+.footer .container {
+    border-top-color: rgb(59, 64, 66);
+}
+.footer-links ul li a svg .outer-shape {
+    fill: #3391ff;
+}
+.footer-links ul li a svg .inner-shape {
+    fill: rgb(232, 230, 227);
+}
+.footer-links ul li:hover a svg .outer-shape {
+    fill: rgb(82, 153, 203);
+}
+.posts li::before {
+    background-color: rgb(38, 41, 43);
+    background-image: none;
+}
+.posts li a {
+    text-decoration-color: currentcolor;
+}
+.posts li a:hover {
+    text-decoration-color: currentcolor;
+}
+.posts li .date {
+    color: rgb(152, 143, 129);
+}
+@media (prefers-color-scheme: dark) {
     body {
-        background-color: #000;
-        color: #fff
+        background-color: rgb(0, 0, 0);
     }
-    .content:after,
-    .post .featuredImage:before {
-        background: #000
+    .posts li .date,
+    body {
+        color: rgb(232, 230, 227);
     }
+    .postNav {
+        border-top-color: rgb(131, 122, 108);
+        border-bottom-color: rgb(131, 122, 108);
+    }
+    .footer .container {
+        border-top-color: rgb(131, 122, 108);
+    }
+}
+@media only screen and (min-width: 800px) {
+    .content::after {
+        background-color: rgb(24, 26, 27);
+        background-image: none;
+    }
+    .header nav ul li {
+        background-color: rgba(0, 0, 0, 0);
+        background-image: none;
+        border-color: currentcolor;
+    }
+    .header nav ul li a {
+        color: rgb(232, 230, 227);
+        text-decoration-color: currentcolor;
+    }
+    .header nav ul li a:hover {
+        color: rgb(82, 153, 203);
+    }
+    .header nav ul li.current {
+        border-bottom-color: rgba(48, 52, 54, 0.4);
+    }
+    .post .featuredImage::before {
+        background-color: rgb(24, 26, 27);
+        background-image: none;
+    }
+}
+@media only screen and (min-width: 800px) and (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(0, 0, 0);
+        color: rgb(232, 230, 227);
+    }
+    .content::after,
+    .post .featuredImage::before {
+        background-color: rgb(0, 0, 0);
+        background-image: none;
+    }
+}
+
+/* Override Style */
+.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+
 }
 
 @media only screen and (min-width:1200px) {

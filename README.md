@@ -1,1 +1,1 @@
-# ramonatame.github.io
+This website contains tutorials, guides and step-by-step instructions on improving the security posture of an organisation and other articles useful for blue-hat professionals. It follows a defensive perspective and explains topics that are less commonly discussed or agreed upon on the Internet or to provide yet another view on the subject.
