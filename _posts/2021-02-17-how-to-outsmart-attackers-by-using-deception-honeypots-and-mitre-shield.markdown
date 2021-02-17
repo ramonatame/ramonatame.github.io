@@ -4,13 +4,15 @@ title: "How to Outsmart Attackers by Using Deception, Honeypots and MITRE Shield
 date:   2021-02-17
 tags: ["Featured"]
 ---
+{% include image.html url="/images/my-cat.jpg" description="My cat, Robert Downey Jr." %}
 
 <figure>
 	<img src="{{ '/assets/img/chess.jpg' | prepend: site.baseurl }}" alt=""> 
-	<figcaption>[Image by jplenio from Pixabay](https://pixabay.com/users/jplenio-7645255/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3801531)</figcaption>
+	[<figcaption>Image by jplenio from Pixabay</figcaption>]
 </figure>
 
 Defending against attackers may feel a lost cause - motivated and well-funded attackers have good tools, budget, well-trained people and above all they have patience. They rarely run out of time and need to rush their attacks. On the opposite side, we, the defenders sit. We have limited budget and as everything depends on the budget, we have some good tools, some less, some well-trained people and no patience: there is always so much to do to prevent broad ranges of attacks and so little resources. Which makes so much more important deploying effective controls and using well-grounded security strategies.
+
 We use many tools. But we rarely use strategies. We rarely use deception - a critical strategy used since the oldest times in battlefields. Deception doesn't have to completely deter enemies or prevent their attacks, but they can simply be "canaries in coal mines", letting you know when your enemies have infiltrated in and all your other security tools and controls failed to notify you.
 Deception doesn't mean honeypots. Honeypots and all their subcategories are a subtype of deception, but many more can be employed. However, deception is one of those topics many can theorize on, but few tell you how to apply it in practice. Here are some thoughts.
 
@@ -33,7 +35,9 @@ Surely you can deploy scarce decoys around your networks, such as dummy files an
 ## Part 5: The Decoys, Honeypots and MITRE Shield
 
 There are a variety of decoys that can be used to deliver the deception story(es), of which the most well-known are honeypots as in fake files placed on real servers and desktops, fake servers placed in real networks or fake networks communicating to real networks. But fake networks (honeynets) are seldom used in practice, beside for research practices or used by huge corporations - they require plenty of effort and resources, which most companies do not have. 
+
 Decoy types can be countless. The limit is simply your imagination. However, if you are out of practice, check out [MITRE Shield](https://shield.mitre.org/matrix/). MITRE Shield is a knowledge base that maps out a broad range of defensive tactics and techniques to [MITRE Att&ck](https://attack.mitre.org/matrices/enterprise/). It can be useful for many defensive purposes, including as a source for decoy examples and cyber deception techniques - the best one I found out there. Recently, they mapped these defensive techniques by APT groups as well, which can only help you tighten your deception plan around your enemies.
+
 Use decoys as a means to deliver your deception story. Place them as "breadcrumbs" throughout your system, starting from the likely points of compromise and continuing up to the place where your fake crown jewel sit. The decoys should always be consistent with the story you deliver and with the rest of your administrative and technical controls.
 
 ## Part 6: Stakeholders Buy-In
@@ -43,7 +47,9 @@ You already invested quite a lot of effort in planning if you reached this point
 ## Part 7: Performance, Effectiveness and Monitoring
 
 Monitoring your decoys system is essential - you cannot just leave it there and check it from time to time. Its value comes from giving you a timely alert when there is an intruder. Hence, you need a way to tell when one of your decoy is tripped and you need to be able to uniquely identify the decoy and the system where it triggered. You should integrate your deception system with the rest of your security tools and use them to deploy the decoys, monitor them, alert on them or to correlate them with other events in your system.
+
 Unlike other security systems, assessing the effectiveness of a deception control can be difficult. If a decoy does not get triggered, it doesn't mean you system is intruder-free. It may mean the intruder was not interested in the decoy, he detected it as a decoy or he simply didn't see it. You can only assess effectiveness in time, when real attacks happen or when doing external red teaming or penetration testing exercises. An effective deception system alerts on the highest criticality level as it should have zero or a very low false alert count. For that, employees need to be trained to not trip the decoys and that can be a real challenge.
+
 Performance simply put means how fast the decoy was triggered after breaching the system. This is a simple metric, given that OS logs can provide enough information for this assessment. Performance and effectiveness should be assessed and improved with every opportunity.
 
 ## Summing Up
