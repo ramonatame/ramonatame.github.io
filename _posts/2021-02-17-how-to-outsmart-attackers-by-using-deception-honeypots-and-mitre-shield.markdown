@@ -57,5 +57,5 @@ Designing defensive deception controls is as much a science as it is an art. You
 
 ## Further Resources
 
-*Crafting an Effective Cyber Deception by Adam Tyra, Cyber Magazine* - An incredible article on cyber deception, walking you through what deception means, the mindset you need, practical steps to follow. I also consider this article one of the best writings in security altogether.
-*[MITRE Shield](https://shield.mitre.org/matrix/)* - Knowledge-base for blue teams on defensive tactics and techniques they could employ, including cyber deception techniques
+* *Crafting an Effective Cyber Deception by Adam Tyra, Cyber Magazine* - An incredible article on cyber deception, walking you through what deception means, the mindset you need, practical steps to follow. I also consider this article one of the best writings in security altogether.
+* *[MITRE Shield](https://shield.mitre.org/matrix/)* - Knowledge-base for blue teams on defensive tactics and techniques they could employ, including cyber deception techniques
