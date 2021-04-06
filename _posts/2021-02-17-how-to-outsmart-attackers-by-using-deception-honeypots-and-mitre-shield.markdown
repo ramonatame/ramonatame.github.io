@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "How to Outsmart Attackers by Using Deception, Honeypots and MITRE Shield"
+title: "How to Improve Your Defensive Strategy by Using Cyber Deception, Honeypots and MITRE Shield"
 date:   2021-02-17
 tags: ["Featured"]
 ---
 
 <figure>
 	<img src="{{ '/assets/img/chess.jpg' | prepend: site.baseurl }}" alt=""> 
-	<figcaption>Image by jplenio from Pixabay</figcaption>
+<!-- 	<figcaption>Image by jplenio from Pixabay</figcaption> -->
 </figure>
 
 Defending against attackers may feel a lost cause - motivated and well-funded attackers have good tools, budget, well-trained people and above all they have patience. They rarely run out of time and need to rush their attacks. On the opposite side, we, the defenders sit. We have limited budget and as everything depends on the budget, we have some good tools, some less, some well-trained people and no patience: there is always so much to do to prevent broad ranges of attacks and so little resources. Which makes so much more important deploying effective controls and using well-grounded security strategies.
