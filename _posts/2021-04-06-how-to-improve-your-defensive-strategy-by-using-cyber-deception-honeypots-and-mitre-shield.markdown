@@ -1,21 +1,21 @@
 ---
 layout: post
 title: "How to Improve Your Defensive Strategy by Using Cyber Deception, Honeypots and MITRE Shield"
-date:   2021-02-17
+date:   2021-04-06
 tags: ["Featured"]
 ---
 
 Defending against attackers may feel a lost cause - motivated and well-funded attackers have good tools, budget, well-trained people and above all they have patience. They rarely run out of time and need to rush their attacks. On the opposite side, we, the defenders sit. We have limited budget and as everything depends on the budget, we have some good tools, some less, some well-trained people and no patience: there is always so much to do to prevent broad ranges of attacks and so little resources. Which makes so much more important deploying effective controls and using well-grounded security strategies.
 
-We use many tools. But we rarely use strategies. We rarely use deception - a critical strategy used since the oldest times in battlefields. Deception doesn't have to completely deter enemies or prevent their attacks, but they can simply be "canaries in coal mines", letting you know when your enemies have infiltrated in and all your other security tools and controls failed to notify you.
-Deception doesn't mean honeypots. Honeypots and all their subcategories are a subtype of deception, but many more can be employed. However, deception is one of those topics many can theorize on, but few tell you how to apply it in practice. Here are some thoughts.
-
-## Part 1: Your Crown Jewels
-
 <figure>
 	<img src="{{ '/assets/img/chess.jpg' | prepend: site.baseurl }}" alt=""> 
 <!-- 	<figcaption>Image by jplenio from Pixabay</figcaption> -->
 </figure>
+
+We use many tools. But we rarely use strategies. We rarely use deception - a critical strategy used since the oldest times in battlefields. Deception doesn't have to completely deter enemies or prevent their attacks, but they can simply be "canaries in coal mines", letting you know when your enemies have infiltrated in and all your other security tools and controls failed to notify you.
+Deception doesn't mean honeypots. Honeypots and all their subcategories are a subtype of deception, but many more can be employed. However, deception is one of those topics many can theorize on, but few tell you how to apply it in practice. Here are some thoughts.
+
+## Part 1: Your Crown Jewels
 
 If you have basic security controls in place - and you should before thinking about deception - then your problem isn't random kiddies attack. Your problem is organized groups of attackers, highly resourced, such as APT groups. They're not going to launch random attacks against you or settle for the least they can get once they compromise your system - no. They are going for your crown jewels - be them financial, personal or client data, your company's strategy, trade secrets or any other critical assets. Get in the same room with the COO, CRO and/or CIO and put together a list of all the crown jewels. Keep it safe.
 
