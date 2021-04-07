@@ -6,6 +6,11 @@ tags: ["Featured"]
 ---
 
 CISSP is by far one of the most craved certifications for security professionals. And it is rightly so, considering the amount of effort one has to go through to get this qualification. Yes, a lot of work goes in, but it's far from impossible and achieving it comes with great satisfaction and it truly opens new doors. Why? Companies trust CISSP. Got CISSP? Companies trust you.
+
+<figure>
+	<img src="{{ '/assets/img/cissp.png' | prepend: site.baseurl }}" alt=""> 
+</figure>
+
 Here are a few thoughts based on my experience split in the following sections:
 * How I prepared for the exam
 * How I should have prepared for it
@@ -13,10 +18,6 @@ Here are a few thoughts based on my experience split in the following sections:
 
 
 ## 1. How I prepared for CISSP
-
-<figure>
-	<img src="{{ '/assets/img/cissp.png' | prepend: site.baseurl }}" alt=""> 
-</figure>
 
 You will find many discussions on resources out there, what worked for different people. The following 2 books worked for me:
 * CISSP Official Study Guide
