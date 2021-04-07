@@ -21,7 +21,9 @@ Here are a few thoughts based on my experience split in the following sections:
 You will find many discussions on resources out there, what worked for different people. The following 2 books worked for me:
 * CISSP Official Study Guide
 * Eleventh Hour CISSP
+
 I am confident I couldn't have passed the exam by studying only one of these books. They don't overlap 100%, so I wouldn't think of the Eleventh Hour CISSP as a summary for the official guide, as some do. Were they enough bundled together? Yes. This exam follows a CAT format and you receive between 100 and 150 questions. As soon as the algorithm knows you're going to pass or fail for sure, the exam stops. Mine stopped at 107 questions and these are the only resources that I used. It is worth mentioning though that I really understood and knew them well before going to the exam - I didn't just read them as novels.
+
 It took me 4 months to study them - 2 months to read the first time, 2 months to go over the more difficult chapters until it all made sense.
 
 
@@ -35,6 +37,7 @@ Although I read many reviews and discussions on CISSP, somehow I missed the fact
 ## 3. Outcomes and next steps
 
 As soon as I got CISSP and tiny bit bragged about it, I gained more visibility - more people became interested to network, exchange thoughts on security topics or collaborate. There is also the (ISC)2 portal I got access to, which helps seeing what others in the industry are concerned of or the security tools and practices in trend.
+
 Should CISSP be the final goal as a security professional? Definitely not. With CISSP you gain a broad view on security, but hardly any depth. You'd still have to invest more time in training and with CISSP you'll have to, as the only way to maintain your accreditation is to prove that you continuously invest in your education.
 
 
