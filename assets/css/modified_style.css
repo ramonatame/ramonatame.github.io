@@ -1576,7 +1576,7 @@ a:hover {
 
 }
 
-@media only screen and (min-width:400px) {
+@media only screen and (min-width:600px) {
     body {
         font-size: 125%
     }
@@ -1599,7 +1599,7 @@ a:hover {
         transform-origin: bottom left
     }
     .container {
-        max-width: 440px;
+        max-width: 600px;
         margin-left: auto;
         margin-right: auto;
         padding: 0
@@ -1623,7 +1623,7 @@ a:hover {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        max-width: 400px;
+        max-width: 600px;
         overflow: hidden
     }
     .header h1 {
