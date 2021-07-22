@@ -789,7 +789,7 @@ a:hover {
     color: #fff;
     text-decoration: none;
     position: relative;
-    right: 2rem;
+    right: 4rem;
     transition: all .2s ease-in-out
 }
 
@@ -1527,7 +1527,7 @@ a:hover {
         border-top-color: rgb(131, 122, 108);
     }
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 800px) {
     .content::after {
         background-color: rgb(24, 26, 27);
         background-image: none;
@@ -1552,7 +1552,7 @@ a:hover {
         background-image: none;
     }
 }
-@media only screen and (min-width: 400px) and (prefers-color-scheme: dark) {
+@media only screen and (min-width: 800px) and (prefers-color-scheme: dark) {
     body {
         background-color: rgb(0, 0, 0);
         color: rgb(232, 230, 227);
@@ -1769,7 +1769,7 @@ a:hover {
     }
 }
 
-@media only screen and (min-width:400px) and (prefers-color-scheme:dark) {
+@media only screen and (min-width:800px) and (prefers-color-scheme:dark) {
     /*
                         _______
                        /       \
@@ -2185,7 +2185,7 @@ a:hover {
         border-top-color: rgb(131, 122, 108);
     }
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 800px) {
     .content::after {
         background-color: rgb(24, 26, 27);
         background-image: none;
@@ -2210,7 +2210,7 @@ a:hover {
         background-image: none;
     }
 }
-@media only screen and (min-width: 400px) and (prefers-color-scheme: dark) {
+@media only screen and (min-width: 800px) and (prefers-color-scheme: dark) {
     body {
         background-color: rgb(0, 0, 0);
         color: rgb(232, 230, 227);
