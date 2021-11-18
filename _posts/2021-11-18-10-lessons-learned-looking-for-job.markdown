@@ -5,11 +5,12 @@ date:   2021-11-18
 tags: ["Featured"]
 ---
 
+We've all been at that point in our career - when we feel we haven't progressed much over some time in our current job, especially if we think we invest quite a bit of personal time for our career development. That was my case, a few months back this year. And although I liked the team and enjoyed working there, I decided it's time to move on. I learned a few lessons along the way, so here they are - hopefully you'll find them useful, too.
+
 <figure>
 	<img src="{{ '/assets/img/career_next_step.jpg' | prepend: site.baseurl }}" alt=""> 
 </figure>
 
-We've all been at that point in our career - when we feel we haven't progressed much over some time in our current job, especially if you think you invest quite a bit of personal time for your career development. That was my case, too, a few months back this year. And although I liked the team and enjoyed working there, I decided it's time to move on. I learned a few lessons along the way, so here they are - hopefully you'll find them useful, too.
 
 ## 1. Start with a discussion with external HR consultants.
 
