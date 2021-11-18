@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10 Lessons I learned while looking for a security job in London"
+title: "10 Lessons Learned While Looking for a Security Job"
 date:   2021-11-18
 tags: ["Featured"]
 ---
