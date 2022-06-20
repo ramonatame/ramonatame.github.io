@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How Does Zero-Trust Work"
+title: "How Does The Zero-Trust Architecture Work"
 date:   2022-06-20
 description: "Zero-Trust is such a buzzword these days and yet there is little documentation online on how to build one. After reading the Zero Trust Networks book by Gilman & Barth (which I recommend 100%), I decided to share my notes. Hopefully you'll find them useful!"
 tags: ["Featured"]
