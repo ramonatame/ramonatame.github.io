@@ -6,7 +6,7 @@ description: "Zero-Trust is such a buzzword these days and yet there is little d
 tags: ["Featured"]
 ---
 
-Hi everyone! It's been a long time since I haven't written anything, so hopefully this blog post makes up for it. Zero-Trust is such a buzzword these days and yet there is little documentation online on how to build one. After reading the Zero Trust Networks book by Gilman & Barth (which I recommend 100%), I decided to share my notes on what I considered the most important ideas in the book and my thoughts blended altogether in this article, should anyone not have the time to go through the entire book. Hope you enjoy it and you find it useful!
+*Hi everyone! It's been a long time since I haven't written anything, so hopefully this blog post makes up for it. Zero-Trust is such a buzzword these days and yet there is little documentation online on how to build one. After reading the Zero Trust Networks book by Gilman & Barth (which I recommend 100%), I decided to share my notes on what I considered the most important ideas in the book and my thoughts blended altogether in this article, should anyone not have the time to go through the entire book. Hope you enjoy it and you find it useful!*
 
 ## THE ZERO-TRUST MODEL
 
