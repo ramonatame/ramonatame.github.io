@@ -16,6 +16,7 @@ The Zero-Trust Model is based on the assumption that your internal network is ho
 * improperly designed network, which is either not properly segregated, segmented or simply left too open
 * your network resides in a public cloud environment, which you don't trust
 * etc.
+
 You can think of the Zero-Trust model as an abstractization applied on top of your network, that, given that the network is not trusted, tries to secure and verify all the communcations, no matter where they occur in your internal network/ between which 2 systems. Given that it's an abstractization, it can work alongside the Perimeter model and complement it. However, if you have a mature Perimeter-based model and you don't have the problems mentioned above, then it's likely that migrating away from it and towards Zero-Trust is not worth it, cost-wise. If you do have the problems above, it may mean that your Perimeter-based model is not the best and you could benefit at least from a hybrid Permiter & Zero-Trust if not entirely from Zero-Trust.
 You have to know that the Zero-Trust model is not meant to protect you from APTs or even privileged employees. It's not meant for industries like finance, which experience an advanced level of attacks. But most companies do not really get to experience this level of attacks. If you assessed who your attackers are they are not APTs and you don't worry extremely about your privileged employees, then Zero-Trust can be the right solution for you.
 Zero-Trust is largely based on configuration management, as it is only feasible and scalable when fully automated. The devices, just like the users and applications have to be authenticated and authorized. If sniffing is a concern, then encryption is needed too and it's often in the shape of certificates. Authentication in a Zero-Trust is usually based on certificates, too. 
@@ -23,6 +24,7 @@ In a Zero-Trust model you mainly care about 3 things:
 * the user/ application authentication. Applications are seen as similar to users
 * device authentication. You don't authenticate just the user, you authenticate (and trust) the device from where the request comes, too.
 * the notion of trust. See Trust Score further down.
+
 And finally, there are 2 main components when building a Zero-Trust model, which are further detailed:
 * The Control Plane
 * The Data Plane 
@@ -55,6 +57,7 @@ Here is how it works:
 * then asks the Trust Engine to compute the Trust Score for the request and get some other useful data
 * it pulls the right Policy for the request
 * then it decides if the request should be allowed, based on the Policy and the response it received from the Trust Engine.
+
 A policy is simply a set of conditional statements under which the request is allowed/ denied. It's worth mentioning that the policies can be layered (broader policies, then more and more granular ones) and they should be fine-grained. Given that this can place a burden, the effort should be distributed across teams - each system owner maintains the policies for that system. The impact the policies would have on the network flows should be monitored for some time, for fine-tuning, and not enforced immediately.
 Finally, the Policy Engine is modeled as a service, with its own CI/CD pipeline: it stores the policies in a version controlled system and every time a policy is updated, it is promoted up through the CI/CD pipeline. 
 
@@ -62,6 +65,7 @@ Finally, the Policy Engine is modeled as a service, with its own CI/CD pipeline:
 The Trust Engine is a service used by the Policy Engine for risk analysis and it delivers 2 things:
 * a Trust Score in a numerical format
 * metadata about the user/ application and the device making the requst, ie. outside working hours + different resources than usual +  different location, which all together might indicate some risk
+
 These 2 deliverables are often bundled as one in a lightweight JSON response. (The book calls this JSON "the agent", but personally I do not agree with this terminology - I would call the Enforcer an agent, given that it's a lightweight client app).
 The Trust Engine works like this:
 * it gets the request
@@ -69,6 +73,7 @@ The Trust Engine works like this:
 * computes the Trust Score
 * creates the JSON
 * sends the JSON back to the Policy Engine
+
 It's worth mentioning that the score should be exposed to end-users, so the cannot maneuvre it. Also, the Trust Engine usually includes conditional logic to handle unknown attack vectors too.
 
 
