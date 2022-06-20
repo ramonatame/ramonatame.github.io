@@ -27,6 +27,10 @@ And finally, there are 2 main components when building a Zero-Trust model, which
 - The Control Plane
 - The Data Plane 
 
+<figure>
+	<img src="{{ '/assets/img/zero-trust.drawio.png' | prepend: site.baseurl }}" alt=""> 
+</figure>
+
 
 ## THE CONTROL PLANE
 The Control Plane handles the requests. It authenticates user or application and the device and then manages the requests for access to protected resources. It is ultimately an authorization system, which will either allow or deny the request.
