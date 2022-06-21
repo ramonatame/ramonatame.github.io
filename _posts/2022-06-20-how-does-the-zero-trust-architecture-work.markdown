@@ -33,7 +33,7 @@ And finally, there are 2 main components when building a Zero-Trust model, which
 * The Data Plane 
 
 <figure>
-	<img src="{{ '/assets/img/zero-trust.drawio.png' | prepend: site.baseurl }}" alt=""> 
+	<img src="{{ '/assets/img/zero_trust_model.png' | prepend: site.baseurl }}" alt=""> 
 	<figcaption>Zero-Trust Architecture</figcaption>
 </figure>
 
