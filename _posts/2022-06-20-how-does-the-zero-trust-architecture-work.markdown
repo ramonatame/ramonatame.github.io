@@ -8,14 +8,13 @@ tags: ["Featured"]
 
 *Hi everyone! It's been a long time since I've written anything, so hopefully this blog post makes up for it. Zero-Trust is such a buzzword these days and yet there is little documentation online on how to build one. I recently read the "Zero Trust Networks" book by Gilman & Barth (which I recommend 100%), so I decided to share my notes and my thoughts in this article, should anyone not have the time to go through the entire book. Hope you enjoy it and find it useful!*
 
-## THE ZERO-TRUST MODEL
+## WHY AND WHEN TO USE THE ZERO-TRUST ARCHITECTURE
 
-The Zero-Trust Model is based on the assumption that your internal network is hostile, compromised or simply not to be trusted, which could be caused by:
-* internal threats like gruntled employees 
-* significant incidents in the past and you cannot say for sure whether they were eradicated
-* improperly designed network: not segmented, not segregated or simply left too open
-* other threats due to using a public cloud environment
-* etc.
+Sometimes your threat actors list may not justify the cost of using a Perimeter-based model. Zero-Trust is not inexpensive either, but it may be more feasible. Sometimes you already use a Perimiter-based model but you feel that it fails you and you feel trapped between taking all the risks to keep the network as it is, and having to redesign your network, or parts of it. Depending on the complexity of your network, redesigning it might come with an incredible amount of effort and costs. 
+Other times you may simply wonder how much you should really trust your network. Did you have significant incidents in the past and you really can't tell whether you succesfully eradicated them? Is your network improperly designed, like not well segmented, segregated or left somewhat open? Are you concerned of how disgruntled employees might act? Are you using public cloud and the fact of sharing the same infrastructure with other tenants makes your worried?
+These are just a few examples, but the list can go on and on. Did you notice a pattern in all the above scenarios? All assume that a threat actor already breached your perimeter and they are in. The network is assumed to be hostile, compromised or simply not to be trusted. It is concerns like this that the Zero-Trust model tries to help with and that might drive you to consider using it. 
+
+## THE ZERO-TRUST MODEL
 
 You can think of the Zero-Trust model as another layer applied on top of your network, that abstracts your network design and whether it's secure or not. This new layer tries to secure and verify all the network communications, no matter their source or destination. Given that it abstracts your network design, you could use both the Perimeter model and the Zero-Trust one, in line with the "secure in depth" principle. It's up to you to define if it's worth it, cost-wise. Generally speaking, of all the issues mentioned above, your biggest drive to use Zero-Trust might be an improperly designed network or a significant past incident.
 
