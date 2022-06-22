@@ -12,9 +12,9 @@ tags: ["Featured"]
 
 Sometimes your threat actors list may not justify the cost of using a Perimeter-based model. Zero-Trust is not inexpensive either, but it may be more feasible. Sometimes you already use a Perimiter-based model but you feel that it fails you and you feel trapped between taking all the risks to keep the network as it is, and having to redesign your network, or parts of it. Depending on the complexity of your network, redesigning it might come with an incredible amount of effort and costs. 
 
-Other times you may simply wonder how much you should really trust your network. Did you have significant incidents in the past and you really can't tell whether you succesfully eradicated them? Is your network improperly designed, like not well segmented, segregated or left somewhat open? Are you concerned of how disgruntled employees might act? Are you using public cloud and the fact of sharing the same infrastructure with other tenants makes your worried?
+Other times you may simply wonder how much you should really trust your network. Did you have significant incidents in the past and you really can't tell whether you successfully eradicated them? Is your network improperly designed, like not well segmented, segregated or left somewhat open? Are you concerned of how disgruntled employees might act? Are you using public cloud and the fact of sharing the same infrastructure with other tenants makes your worried?
 
-These are just a few examples, but the list can go on and on. Did you notice a pattern in all the above scenarios? All assume that a threat actor already breached your perimeter and they are in. The network is assumed to be hostile, compromised or simply not to be trusted. It is concerns like this that the Zero-Trust model tries to help with and that might drive you to consider using it. 
+These are just a few examples, but the list can go on and on. Did you notice a pattern in all the above scenarios? All assume that a threat actor already breached your perimeter, and they are in. The network is assumed to be hostile, compromised or simply not to be trusted. It is concerns like this that the Zero-Trust model tries to help with and that might drive you to consider using it. 
 
 ## THE ZERO-TRUST MODEL
 
@@ -46,7 +46,7 @@ The security of the Control Plane itself is, of course, essential.
 The Control Plane has 3 isolated components, which will be further detailed:
 * The Enforcer
 * The Policy Engine
-* The Trust Engine
+* The Trust Engine.
 
 
 ### THE ENFORCER
@@ -67,7 +67,7 @@ The Policy Engine decides if a request should be allowed. Here is how it works:
 * then it decides if the request should be allowed, based on the Policy and the response it received from the Trust Engine
 * sends back the response to the Enforcer
 
-A policy is simply a set of conditional statements under which a request is allowed/ denied to access a resource. It's worth mentioning that the policies can be layered (broader policies, then more and more granular ones) and they should be fine-grained. Given that this can place a burden, the effort should be distributed across teams - each system owner maintains the policies for that system. Before enforcing the policies, their impact on the network flows should be monitored for some time, for fine-tuning.
+A policy is simply a set of conditional statements under which a request is allowed/ denied accessing a resource. It's worth mentioning that the policies can be layered (broader policies, then more and more granular ones) and they should be fine-grained. Given that this can place a burden, the effort should be distributed across teams - each system owner maintains the policies for that system. Before enforcing the policies, their impact on the network flows should be monitored for some time, for fine-tuning.
 
 Finally, the Policy Engine is modeled as a service, with its own CI/CD pipeline: it stores the policies in a version controlled system and every time a policy is updated, it is promoted up through the CI/CD pipeline. 
 
@@ -85,7 +85,7 @@ The Trust Engine works like this:
 * creates the JSON
 * sends the JSON back to the Policy Engine
 
-It's worth mentioning that the score should not be exposed to end-users, so they cannot maneuvre it. Also, the Trust Engine should include conditional logic to handle unknown attack vectors too.
+It's worth mentioning that the score should not be exposed to end-users, so they cannot maneuver it. Also, the Trust Engine should include conditional logic to handle unknown attack vectors too.
 
 
 #### THE TRUST SCORE
@@ -93,10 +93,10 @@ The Trust Score is purely a numerical value that associates a level of trust wit
 
 There are 2 main problems a trust score system has to solve:
 * sourcing a trust score when there is no trust
-* managing trust
+* managing trust.
 
 ##### Sourcing Trust
-When there is no trust, you need to have a mechanism to source it from somewhere. A common method is Trust Delegation. Trust Delegation is kind of a transitory relationship: you trust component A, component A spins up component B, so you trust component B. An easy example is trusting a new system because you trust the provisioning system. And about that, a new system is more trusted than one that hasn't been imaged/ rotated for years, as it has a smaller chance of being already compromised.
+When there is no trust, you need to have a mechanism to source it from somewhere. A common method is Trust Delegation. Trust Delegation is kind of transitory relationship: you trust component A, component A spins up component B, so you trust component B. An easy example is trusting a new system because you trust the provisioning system. And about that, a new system is more trusted than one that hasn't been imaged/ rotated for years, as it has a smaller chance of being already compromised.
 
 Trust may need to be sourced also if the score gets too low to allow access to some resource that the (user/ app, device) tuple should really have access to. Some methods for this are: having management approval, visiting the IT department, having an additional MFA push etc. 
 
@@ -113,7 +113,7 @@ The Data Plane is used mainly to store all the data about the user/ app and the 
 A few things worth mentioning:
 * it's very likely that you'll have significantly less data for autonomous systems than you have for humans
 * certificates can provide useful data too: a device certificate could include data like the device type, the OS etc.; a user certificate could give you the user role
-* there may be some PII you have to manage, by storing user data
+* there may be some PII you have to manage, by storing user data.
 
 ### THE DATA STORES
 Think of the Data Stores as the source of truth for the current and past state of the system: it holds the inventory databases and the historical databases. The inventory databases are just asset inventory databases and can be built using the configuration management. The historical databases hold anything worth storing about the user/ app or the device, that would influence the trust score, such as patterns, timing, frequency, accessed resources etc. There could be a database of expected flows, too.
@@ -122,12 +122,12 @@ The Data Stores are modeled as a service and interact with the Trust Engine. The
 
 ## LIMITATIONS
 The Zero-Trust design does come with a few limitations, which you should be aware of:
-* DDOS attacks are not prevented and you should use a specialised system for that
+* DDOS attacks are not prevented and you should use a specialized system for that
 * Although it's using encryption, privacy is not guaranteed: ie. you can still see which package is routed from where to where, even if you cannot see the package content
 * Social engineering should still be addressed outside this system
 * And most importantly, the invalidation of trust can occur before the policy is polled again. Should you need to revoke the trust for an agent, you can only do it next time the enforcement component checks the policy, not in between, given that it's a polling system. Pushing invalidation adds significant complexity, hence polling is generally preferred for Zero-Trust.
 
 ## GETTING STARTED WITH ZERO-TRUST
-If you're just getting started with the Zero-Trust model, there are a few things to keep in mind. Firstly, only move to Zero-Trust if it makes sense (see the very first section). Secondly, start small. You don't need to move all your internal networks and network flows at once. Choose a small scope, increment over it, get your system ready and only then scale it to the rest of the networks. Thirdly, if you don't have an asset inventory, use your configuration management to build one and if you don't authenticate devices, start doing it.  Forthly, whenever covering a new network, don't enforce the policies immediately. You should allow for a long period of time just to log the network flows, monitor how the policies would behave and fine-tune them. Otherwise, you'll end up with frequent situations when someone has to intervene, which will make the system fail altogether.
+If you're just getting started with the Zero-Trust model, there are a few things to keep in mind. Firstly, only move to Zero-Trust if it makes sense (see the very first section). Secondly, start small. You don't need to move all your internal networks and network flows at once. Choose a small scope, increment over it, get your system ready and only then scale it to the rest of the networks. Thirdly, if you don't have an asset inventory, use your configuration management to build one and if you don't authenticate devices, start doing it.  Fourthly, whenever covering a new network, don't enforce the policies immediately. You should allow for a long period of time just to log the network flows, monitor how the policies would behave and fine-tune them. Otherwise, you'll end up with frequent situations when someone has to intervene, which will make the system fail altogether.
 
 *That's pretty much it! Not as complex as it sounds, is it? If you'd like to go into more details, I really recommend the "Zero Trust Networks" book. I hope you enjoyed the article and I'll see you on the next one!*
