@@ -11,7 +11,9 @@ tags: ["Featured"]
 ## WHY AND WHEN TO USE THE ZERO-TRUST ARCHITECTURE
 
 Sometimes your threat actors list may not justify the cost of using a Perimeter-based model. Zero-Trust is not inexpensive either, but it may be more feasible. Sometimes you already use a Perimiter-based model but you feel that it fails you and you feel trapped between taking all the risks to keep the network as it is, and having to redesign your network, or parts of it. Depending on the complexity of your network, redesigning it might come with an incredible amount of effort and costs. 
+
 Other times you may simply wonder how much you should really trust your network. Did you have significant incidents in the past and you really can't tell whether you succesfully eradicated them? Is your network improperly designed, like not well segmented, segregated or left somewhat open? Are you concerned of how disgruntled employees might act? Are you using public cloud and the fact of sharing the same infrastructure with other tenants makes your worried?
+
 These are just a few examples, but the list can go on and on. Did you notice a pattern in all the above scenarios? All assume that a threat actor already breached your perimeter and they are in. The network is assumed to be hostile, compromised or simply not to be trusted. It is concerns like this that the Zero-Trust model tries to help with and that might drive you to consider using it. 
 
 ## THE ZERO-TRUST MODEL
